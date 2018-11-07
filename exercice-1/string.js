@@ -1,6 +1,6 @@
 var str = 'hello world';
 
-function ucFirst(str) {
+function ucfirst(str) {
   if (str.length > 0) {
     return str[0].toUpperCase() + str.substring(1);
   } else {
@@ -47,7 +47,7 @@ for (var i = 0; i < message.length; i++) {
 }
 
 
-console.log(ucFirst(str));
+console.log(ucfirst(str));
 console.log(capitalize(str));
 console.log(camelCase(str));
 console.log(snake_case(str));
