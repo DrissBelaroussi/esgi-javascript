@@ -35,6 +35,7 @@ function snake_case(str){
 
 function leet(message) {
  
+ message = message.toLowerCase();
  var messageLeet = "";
  
 for (var i = 0; i < message.length; i++) {
@@ -44,6 +45,7 @@ for (var i = 0; i < message.length; i++) {
   else if (message[i].toLowerCase() === "t") { messageLeet += "7"; }
   else if (message[i].toLowerCase() === "s") { messageLeet += "5"; }
   else if (message[i].toLowerCase() === "o") { messageLeet += "0"; }
+  else if (message[i].toLowerCase() === "u") { messageLeet += "(_)"; }
   else { messageLeet += message[i].toLowerCase(); }
 }
 	return messageLeet;
