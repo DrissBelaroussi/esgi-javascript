@@ -20,6 +20,7 @@ function capitalize(str) {
 }
 
 function camelCase(str) {
+	str = str.replace(str[0] , str[0].toUpperCase())
 	return str.replace(/\W+(.)/g, function(match, chr)
        {
             return chr.toUpperCase();
@@ -49,7 +50,7 @@ for (var i = 0; i < message.length; i++) {
 
 console.log(ucfirst(str));
 console.log(capitalize(str));
-console.log(camelCase(str));
+console.log(camelCase('toggle Case Is The Coolest'));
 console.log(snake_case(str));
 console.log(leet('anaconda'));
 
