@@ -11,6 +11,8 @@ function type_check_v1(value , type){
 		return true;
 	} else if (typeof value == 'object' && Array.isArray(value) == true && type != 'array') {
 		return false;
+	} else if (typeof value == 'object' && type != 'object') {
+		return false;
 	} else if (typeof value === type) {
 		return true;
 	} else {
