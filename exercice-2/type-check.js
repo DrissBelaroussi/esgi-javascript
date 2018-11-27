@@ -1,5 +1,3 @@
-
-
 function type_check_v1(value , type){
 	if(String(value) == 'null' || String(value) == 'undefined'){
 		if ( String(value) == type ){
