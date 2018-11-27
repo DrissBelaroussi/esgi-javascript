@@ -1,7 +1,8 @@
 
 
 function type_check_v1(value , type){
-	if(String(value) == 'null' || value === 'undefined' ){
+	if(String(value) == 'null' || String(value) == 'nullNotObject' ||
+	 String(value) == 'undefined' || String(value) == 'arrayNotObject'  ){
 		if ( String(value) == type ){
 			return true ; 
 		}
@@ -14,5 +15,5 @@ function type_check_v1(value , type){
 	}
 }
 
-check = type_check_v1 (undefined, 'undefined' );
+check = type_check_v1 ('', '' );
 console.log(check);
