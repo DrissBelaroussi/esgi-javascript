@@ -36,6 +36,24 @@ function type_check_v2(value , type){
 	}
 }
 
+function type_check_v3(value , type){
+	if(value == type.value && type_check_v1(value, type.type) == true){
+		return true;
+	} else if(typeof value == 'object') {
+		return type_check_v1(value, type.type);
+	} else if(type.enum) {
+		for (var i = 0; i < type.enum.length; i++) {
+			if(type.enum[i] === value){
+				return true;
+			} else {
+			return false
+			}
+		}
+	} else {
+		return false;
+	}
+}
+
 check = type_check_v2 ({prop1:1}, {type:"object"});
 console.log(check);
 check = type_check_v2 ("foo", {type:"string" , value:"foo"});
@@ -44,3 +62,8 @@ check = type_check_v2 ("bar", {type:"string" , value:"foo"});
 console.log(check);
 check = type_check_v2 (2, {enum:["bob", "boy" , 3]});
 console.log(check);
+
+console.log("----------------------------------------------");
+
+
+
