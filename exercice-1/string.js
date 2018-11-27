@@ -1,7 +1,7 @@
 var str = 'hello world';
 
 function ucfirst(str) {
-  if (str.length > 0) {
+  if (str.length > 0 or str != null) {
     return str[0].toUpperCase() + str.substring(1);
   } else {
     return '';
@@ -10,7 +10,7 @@ function ucfirst(str) {
 
 function capitalize(str) {
 
-  if (str.length > 0) {	
+  if (str.length > 0 or str != null) {	
    return str.replace(/\w\S*/g, function(str){
         return str.charAt(0).toUpperCase() + str.substr(1).toLowerCase();
     });
@@ -39,10 +39,8 @@ function leet(message) {
  var messageLeet = "";
  
 for (var i = 0; i < message.length; i++) {
-  if (message[i].toLowerCase() === "l") { messageLeet += "1"; }
-  else if (message[i].toLowerCase() === "e") { messageLeet += "3"; }
+	if (message[i].toLowerCase() === "e") { messageLeet += "3"; }
   else if (message[i].toLowerCase() === "a") { messageLeet += "4"; }
-  else if (message[i].toLowerCase() === "t") { messageLeet += "7"; }
   else if (message[i].toLowerCase() === "s") { messageLeet += "5"; }
   else if (message[i].toLowerCase() === "o") { messageLeet += "0"; }
   else if (message[i].toLowerCase() === "u") { messageLeet += "(_)"; }
